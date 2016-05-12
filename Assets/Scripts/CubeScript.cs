@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MyCude : MonoBehaviour {
+public class CubeScript : MonoBehaviour {
 
 	public float rotateSpeed = 1.0f;
 	public Vector3 spinVelocity = Vector3.zero;
 	Vector3 spinAxis = new Vector3 (0,1,0);
-
 	
 	void Start () {
 		spinVelocity = new Vector3 (Random.value, Random.value, Random.value);
