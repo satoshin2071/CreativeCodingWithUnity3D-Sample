@@ -7,7 +7,7 @@ public class Sketch : MonoBehaviour {
 
 	void Start () {
 
-		int totalCubes = 8;
+		int totalCubes = 30;
 		float totalDistance = 2.9f;
 
 		for (int i = 0; i < totalCubes; i++) {
@@ -23,7 +23,7 @@ public class Sketch : MonoBehaviour {
 			var cube = (GameObject)Instantiate (spinCube, new Vector3 (x,y,z), Quaternion.identity);
 			
 			// Gradually small
-			cube.GetComponent<CubeScript> ().SetSize ((1.0f - perc) * .5f );
+			cube.GetComponent<CubeScript> ().SetSize ((1.0f - perc) * .45f );
 			
 			// Small cube early, large cube is slow
 			cube.GetComponent<CubeScript> ().rotateSpeed = .2f + perc*4.0f;
